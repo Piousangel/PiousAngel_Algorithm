@@ -1,4 +1,4 @@
-package Programers;
+package Programers.Level1;
 import java.io.IOException;
 
 public class 정수제곱근판별 {
