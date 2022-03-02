@@ -7,3 +7,18 @@
 - [x] 프로그래머스LV1
 - [x] 프로그래머스LV2
 - [x] 백준 Sol
+
+##### 람다표현식 자주 사용하면서 연습하기
+- filter()
+- map()
+- reduce()
+
+##### input() 대신 
+import sys  
+sys.stdin.readline().rstrip() 
+
+##### 라이브러리
+- itertools(순열, 조합)
+- heqpq(우선순위 큐)
+- bisect(이진탐색)
+- collections(deque, counter...)
