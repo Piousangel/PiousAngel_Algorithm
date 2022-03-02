@@ -8,17 +8,26 @@
 - [x] 프로그래머스LV2
 - [x] 백준 Sol
 
-##### 람다표현식 자주 사용하면서 연습하기
+__람다표현식 자주 사용하면서 연습하기__  
 - filter()
 - map()
 - reduce()
 
-##### input() 대신 
+__input() 대신__ 
+~~~
 import sys  
-sys.stdin.readline().rstrip() 
+sys.stdin.readline().rstrip()
+~~~
 
-##### 라이브러리
+__라이브러리__  
 - itertools(순열, 조합)
 - heqpq(우선순위 큐)
 - bisect(이진탐색)
 - collections(deque, counter...)
+
+__재귀함수 문제풀때 깊이를 설정해주면 좋다__  
+~~~
+import sys  
+sys.setrecursionlimit(10**6)  
+0의 개수만큼 늘려주면 된다고 합니다. 10^6 == 1,000,000
+~~~
