@@ -47,6 +47,14 @@ print(*str) // a b c 출력
 __zip() 내장함수 사용__
 - zip()은 좀더 찾아볼게요
 
+__Counter 함수 사용하기 (최빈값)__
+~~~
+from collections import Counter
+colors = Counter(['blue', 'green', 'red', 'blue','red','blue'])
+print(colors)
+# Counter({'blue': 3, 'red': 2, 'green': 1})
+~~~
+
 __재귀함수 문제풀때 깊이를 설정해주면 좋다__  
 ~~~
 import sys  
