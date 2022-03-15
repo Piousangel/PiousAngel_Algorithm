@@ -1,15 +1,7 @@
-h, m = map(int, input().split())
-w = int(input())
+hour, min = map(int, input().split())
+plusmin = int(input())
 
-time = (h*60) + m + w
-if(time == 0 or time == 1440) : 
-    print(0, 0)
-elif(time > 1440) :
-    time -= 1440
-    hour = time / 60
-    min = time % 60
-    print(hour, min)
-else :
-    hour = time / 60
-    min = time % 60
-    print(hour, min)
+total = hour*60 + min + plusmin
+nowHour = (total//60)%24
+nowMin = total%60
+print(f'{nowHour} {nowMin}')

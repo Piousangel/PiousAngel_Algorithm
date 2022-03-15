@@ -1,9 +1,10 @@
-a, b = map(int, input().split())
+hour, min = map(int, input().split())
 
-time = (a * 60) + b - 45
-if(time < 0) :
-    print(23, 60+time)
-else :
-    hour = time / 60
-    min = time % 60
-    print(hour, min)
+total = hour*60 + min - 45
+
+if total < 0 :
+    print(f'{23} {60+total}')
+else:
+    nowHour = total//60
+    nowMin = total%60
+    print(f'{nowHour} {nowMin}')
