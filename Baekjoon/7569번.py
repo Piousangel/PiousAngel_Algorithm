@@ -6,15 +6,14 @@ dx = [0,0,0,0,1,-1]
 dy = [0,0,1,-1,0,0]
 dz = [1,-1,0,0,0,0]
 answer = 0
-#board = [list(map(int, input().split())) for _ in range(row)]
-board = []
+#board = []
+board = [[list(map(int,sys.stdin.readline())) for i in range(row)] for _  in range(col)]
 q = deque([])
 
 def bfs(board):
-    global col,row,h
-    
+
     while q:
-        x, y, z = q.popleft()
+        z, y, x = q.popleft()
         
         for i in range(6):
             nx = x + dx[i]
@@ -32,7 +31,7 @@ for i in range(h):
         for k in range(col):
             if board[j][k] == 1:
                 q.append([i,j,k])
-        board.append(temp)
+    #board.append(temp)
 
 bfs(board)
 
