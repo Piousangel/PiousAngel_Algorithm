@@ -16,7 +16,7 @@ def preorder(root):
       
 def inorder(root):
     if root != '.':
-        inorder(treee[root][0])
+        inorder(tree[root][0])
         print(root, end='')
         inorder(tree[root][1])
       
@@ -27,7 +27,7 @@ def postorder(root):
         print(root, end='')
         
 ch = 'A'
-preeorder(ch)
+preorder(ch)
 print()
 inorder(ch)
 print()
