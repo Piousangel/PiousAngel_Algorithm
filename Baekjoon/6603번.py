@@ -28,3 +28,5 @@ while True:
     box = [0] * c
     dfs(n_list, box, visited, 0,0,6)
     print()
+
+#3/21
