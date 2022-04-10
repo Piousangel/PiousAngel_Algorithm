@@ -19,7 +19,7 @@ while left_value < right_value :
             break
         temp += mid_value - ch
 
-    if temp < T :
+    if temp <= T :
         left_value = mid_value + 1
         answer = mid_value
     else:
