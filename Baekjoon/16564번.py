@@ -8,6 +8,7 @@ char_list.sort()
 
 mid_level = sum(char_list) // len(char_list)
 
+
 answer = 0
 cnt = 1
 
