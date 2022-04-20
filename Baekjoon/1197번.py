@@ -36,4 +36,5 @@ for arr in sp_list :              #순서대로 가면서
             chk_list[f_node] = s_node
         answer += arr[2]
     
+
 print(answer)
