@@ -1,7 +1,6 @@
-#다시
 import sys
 from collections import deque
-sys.stdin = open('sample.txt')
+# sys.stdin = open('sample.txt')
 input = sys.stdin.readline
 
 n = int(input())
