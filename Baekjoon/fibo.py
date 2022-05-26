@@ -2,18 +2,39 @@ import sys
 sys.stdin = open('sample.txt')
 input = sys.stdin.readline
 
-n = int(input())
 
-arr = [0] * 91
-arr[0] = 0
-arr[1] = 1
+#첫줄에 길이 N짜리 수열, 부분합이 S 이상된다?
 
-cnt = 2
+n, s = map(int, input().split())
 
-while cnt <= n :
+n_list = list(map(int, input().split()))
 
-    arr[cnt] = arr[cnt-1] + arr[cnt-2]
-    cnt += 1
+idx = 0
+temp_idx = 0
+temp_list = []
+total = 0
+answer = 100000
+while True:
 
-print(arr[n])
+    if temp_idx == len(n_list):
+        break
+        
+    if total > answer :
+        continue
 
+    total += n_list[temp_idx]
+
+    if total >= s :
+        n_len = idx - temp_idx 
+        # print(n_len)
+        answer = min(answer, n_len)
+        temp_idx +=1
+        idx = temp_idx
+        total = 0
+
+    idx += 1
+
+if answer == 100000 :
+    print("0")
+else :   
+    print(answer)
