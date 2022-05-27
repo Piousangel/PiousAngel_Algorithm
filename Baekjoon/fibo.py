@@ -18,7 +18,7 @@ while True:
 
     if temp_idx == len(n_list):
         break
-        
+
     if total > answer :
         continue
 
@@ -32,7 +32,8 @@ while True:
         idx = temp_idx
         total = 0
 
-    idx += 1
+    ##else 면 idx를 움직여야 한다 왼쪽, 오른쪽 포인터 중 하나를 옮기는 방식이다
+        idx += 1
 
 if answer == 100000 :
     print("0")
