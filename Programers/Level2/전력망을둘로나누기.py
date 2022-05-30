@@ -4,33 +4,31 @@ import copy
 def chkWire(wires, idx):
     cnt = 0
     w_list = copy.deepcopy(wires)
-    # w_list = []
-    
-    # for i in range(len(wires)):
-    #     w_list.append(wires[i])
-        
+
     q = deque()
     q.append(w_list[idx][1])
-    # w_list.remove(idx)
     del w_list[idx]
   
     while q:
         
-        temp = q.popleft()
+        k = q.popleft()
         
-        for i in range(0, len(w_list)):
+        for i in range(len(w_list)):
+
             flag = False
-            
-            if temp == w_list[i][0]:
+            temp = w_list[i]
+
+            if temp[0] == k :
+                q.append(temp[1])
+                # del w_list[i]
+                w_list.remove(temp)
                 flag = True
-                q.append(w_list[i][1])
-                w_list.remove(w_list[i])
                 
-               
-            elif temp == w_list[i][1]:
+            elif temp[1] == k :
+                q.append(temp[0])
+                # del w_list[i]
+                w_list.remove(temp)
                 flag = True
-                q.append(w_list[i][0])
-                w_list.remove(w_list[i])
                               
             if flag:
                 i -= 1
@@ -40,14 +38,12 @@ def chkWire(wires, idx):
     return cnt
 
 def solution(n, wires):
-    answer = 0
-    minValue = 1001
-    print(wires)
-    for i in range(len(wires)):
-        
+    minValue = 10001
+
+    for i in range(len(wires)) :
         leftWire = chkWire(wires, i)
         rightWire = n - leftWire
-        print(leftWire, rightWire)
-        minValue = min(minValue, abs(leftWire- rightWire))
+        temp = abs(leftWire - rightWire)
+        minValue = min(minValue, temp)
         
     return minValue
