@@ -1,45 +1,41 @@
-def findmaxLamb(graph, visited, info, idx, life, lambCnt) :
+def dfs(status, graph, info, visited, n) :
     global answer
-    print("idx", idx)
-    print("life", life)
-    print("lambCnt", lambCnt)
 
-    answer = max(answer, lambCnt)
-    
-    for node in graph[idx] :
-        if visited[node] != True and life + info[node] > 0:
-            if info[node] == 1:
-                life += 1   #양과 늑대수의 합을 구하려고
-                lambCnt += 1
+    if visited[status] :
+        return
+ 
+    visited[status] = True
+ 
+    lamb, wolf = 0, 0
+    for i in range(n) :
+        if status & (1 << i) :
+            if info[i] == 0 :
+                lamb += 1
             else:
-                life -= 1
-               
-            if life > 0 :
-                visited[node] = True
-                findmaxLamb(graph, visited, info, node, life, lambCnt)
-                visited[node] = False
-    
-    return answer
+                wolf += 1
+ 
+        if wolf >= lamb :
+            return
+ 
+        answer = max(answer, lamb)
+ 
+    for i in range(n):
+        if status & (1 << i) :
+            for j in graph[i] :
+                if not status & (1 << j) :
+                    dfs(status | (1 << j), graph, info, visited, n)
 
 answer = 0
-
 def solution(info, edges):
     global answer
     n = len(info)
-    graph = [[] for i in range(n)]
-    newInfo = []
-    for i in info :
-        if i == 0:
-            newInfo.append(1)
-        else:
-            newInfo.append(-1)
-    visited = [False] * n
-    
+    graph = [[] for _ in range(n)]
+    visited = [0] * (1 << n)
+ 
     for edge in edges :
         graph[edge[0]].append(edge[1])
-        graph[edge[1]].append(edge[0])
-        
-    visited[0] = True
-    answer = findmaxLamb(graph, visited, newInfo, 0, 1, 1)
-    
+ 
+    print(graph)
+    dfs(1, graph, info, visited, n)
     return answer
+ 
