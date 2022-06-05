@@ -1,3 +1,4 @@
-3
-3 4 5
-1 0 1 0
+g Programming Contest
+n New Zealand
+x This is quite a simple problem.
+#
