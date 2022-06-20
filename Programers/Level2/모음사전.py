@@ -1,23 +1,25 @@
-#복습하기
+import sys
+sys.setrecursionlimit(10**7)
 
 def solution(word):
+    answer = 0
+    char_list = ['A','E','I','O','U']
     
-    alph_list = ['A', 'E', 'I', 'O', 'U']
-    blank = ''
-    arr = []
-    cnt = 0
+    temp_list = []
     
-    def dfs(word, cnt) :
+    def dfs(s, temp_list, char_list) :
         
-        if len(word) > len(alph_list) :
+        if len(s) == len(char_list) :
+            temp_list.append(s)
             return
         
-        if word != blank :
-            arr.append(word)
-        
-        for ch in alph_list :
-            dfs(word+ch, cnt + 1)
-
-    dfs(blank, 0)
-    return arr.index(word)+1
+        if s != '' :
+            temp_list.append(s)
+               
+        for ch in char_list :
+            dfs(s+ch, temp_list, char_list)
     
+    dfs('', temp_list, char_list)
+    # print(temp_list)
+    answer = temp_list.index(word)
+    return answer+1
