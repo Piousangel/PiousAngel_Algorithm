@@ -1,7 +1,7 @@
 import sys
 from itertools import combinations
 from collections import deque
-sys.stdin = open('sample.txt')
+# sys.stdin = open('sample.txt')
 input = sys.stdin.readline
 
 # 도시는 N개의 건물, M개의 도로
@@ -58,7 +58,6 @@ def chkDistance(graph, arr) :
 
     temp = 0
     
-
     for i in range(1, N+1) :
         visited2 = [False] * (N+1)
         if i != arr[0] and i != arr[1] :
@@ -68,20 +67,6 @@ def chkDistance(graph, arr) :
         answer_list[2] = temp
         answer_list[0] = arr[0]
         answer_list[1] = arr[1]
-
-# def dfs(house, arr, idx, visited, graph) :
-
-#     if idx == len(arr) :
-#         chkDistance(graph, arr)
-#         return
-
-#     for i in range(len(house)) :
-#         if visited[i] != True :
-#             visited[i] = True
-#             arr[idx] = house[i]
-#             dfs(house, arr, idx+1, visited, graph)
-#             visited[i] = False
-
 
 answer_list = [0, 0, sys.maxsize]
 

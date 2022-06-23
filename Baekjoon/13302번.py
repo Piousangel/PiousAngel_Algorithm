@@ -37,6 +37,7 @@ def dfs(oneCnt, threeCnt, fiveCnt, coupon, totalDay, n_list) :
 
         temp = (oneCnt * 10000) + (threeCnt * 25000) + (fiveCnt * 37000)
         answer = min(answer, temp)
+        
         return
 
 
