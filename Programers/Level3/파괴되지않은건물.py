@@ -1,4 +1,6 @@
+#누적합
 def solution(board, skill):
+
     answer = 0
     row = len(board)
     col = len(board[0])

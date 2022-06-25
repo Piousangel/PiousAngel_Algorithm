@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def chkDistance(graph, visited, start) :
   
     q = deque()
