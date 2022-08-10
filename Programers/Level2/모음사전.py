@@ -1,25 +1,23 @@
-import sys
-sys.setrecursionlimit(10**7)
-
 def solution(word):
     answer = 0
-    char_list = ['A','E','I','O','U']
     
-    temp_list = []
-    
-    def dfs(s, temp_list, char_list) :
+    aeiou = ['A','E','I','O','U']
+    visited = [False] * 5
+    arr = []
+    def dfs(st, temp, idx) :
         
-        if len(s) == len(char_list) :
-            temp_list.append(s)
+        if idx == 6 :
             return
         
-        if s != '' :
-            temp_list.append(s)
-               
-        for ch in char_list :
-            dfs(s+ch, temp_list, char_list)
+        
+        if st != '' :
+            arr.append(st)
+            
+        for i in range(5) :
+            dfs(st + temp[i], temp, idx+1)
+          
+    dfs('', aeiou, 0)
     
-    dfs('', temp_list, char_list)
-    # print(temp_list)
-    answer = temp_list.index(word)
-    return answer+1
+    answer = arr.index(word) +1
+    
+    return answer

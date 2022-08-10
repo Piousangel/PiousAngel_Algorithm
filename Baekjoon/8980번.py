@@ -11,14 +11,15 @@ input = sys.stdin.readline
 
 # 트럭 용량이 40이고 보내는 박스들이 다음표와 같다
 # 
-N, C = map(int, input().split())
+N, C = map(int, input().split())  # 마을 수와 트럭 용량
 
 n = int(input())
 
 arr = []
 
 for i in range(n) :
-    # give, take, boxNum = map(int, input().split())
+    # give, take, boxNum = map(int, input().split()) 
+    #박스를 보낼 마을 번호, 박스를 받을 마을 번호, 보내는 박스 개수
     arr.append(list(map(int, input().split())))
 
 arr.sort(key=lambda x : x[1]) #도착지 기준 정렬
