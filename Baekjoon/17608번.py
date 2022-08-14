@@ -9,7 +9,7 @@ for i in range(n) :
     n_list.append(int(input()))
 
 for k in n_list :
-    if len(stack) == 0 :
+    if len(stack) == 0 : 
         stack.append(k)
     else :
         if stack[-1] > k :
