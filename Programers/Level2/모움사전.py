@@ -1,29 +1,21 @@
-import sys
-sys.setrecursionlimit(10**7)
-
 def solution(word):
     answer = 0
-    st = ''
-    idx = 0
-    target = 6
     
     alpha = ['A','E','I','O','U']
-    # visited = [False] * len(alpha)
-    str_list = []
+    arr = []
     
-    def dfs(st, idx, target) :
-        
-        if idx == target:
-            return
+    def dfs(st, alpha, idx) :
+    
+        if idx == 6 :
+            return 
         
         if st != '' :
-            str_list.append(st)
-        
-        for i in range(0, len(alpha)) :
-            dfs(st + alpha[i], idx+1, target)
+            arr.append(st)
+            
+        for i in range(len(alpha)) :
+            dfs(st + alpha[i], alpha, idx + 1)
     
-    dfs(st, 0, target)
+    dfs('', alpha, 0)
     
-    answer = str_list.index(word) + 1
-       
+    answer = arr.index(word) + 1
     return answer
