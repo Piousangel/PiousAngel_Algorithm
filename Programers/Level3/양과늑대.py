@@ -6,9 +6,10 @@ def dfs(status, graph, info, visited, n) :
     
     visited[status] = True
     
-    lamb, wolf = 0, 0
+    lamb,wolf = 0,0
   
     for i in range(n) :
+
         if status & (1 << i) :
             if info[i] == 0 :
                 lamb += 1
@@ -21,12 +22,14 @@ def dfs(status, graph, info, visited, n) :
     answer = max(answer, lamb)
  
     for i in range(n) :
+
         if status & (1 << i) :
             for node in graph[i] :
                 if not status & (1 << node) :
                     dfs(status | (1 << node), graph, info, visited, n)
 
 answer = 0
+
 def solution(info, edges):
     global answer
     n = len(info)

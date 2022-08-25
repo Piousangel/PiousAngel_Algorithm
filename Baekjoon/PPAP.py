@@ -1,8 +1,6 @@
 import sys
 sys.stdin = open('sample.txt')
-
 input = sys.stdin.readline
-
 temp_str = list(map(str, input().rstrip()))
 
 stack = []

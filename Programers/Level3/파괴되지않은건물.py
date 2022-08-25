@@ -1,4 +1,4 @@
-#누적합
+#누적합 8/26
 def solution(board, skill):
 
     answer = 0
