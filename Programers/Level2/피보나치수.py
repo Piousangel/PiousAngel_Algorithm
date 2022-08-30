@@ -9,5 +9,4 @@ def fibo(n) :
     
     return (fibo(n-2) + fibo(n-1)) % 1234567
 
-
 # 시초나는거 알면서 재귀로 풀어봤습니다.

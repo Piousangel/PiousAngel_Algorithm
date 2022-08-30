@@ -13,10 +13,6 @@ def solution(land):
                   
     return answer
 
-
-
-
-
     # def solution(land):
     # for i in range(1, len(land)):
     #     for j in range(len(land[0])):

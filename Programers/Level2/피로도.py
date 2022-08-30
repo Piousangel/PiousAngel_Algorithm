@@ -21,8 +21,7 @@ def dfs(dungeons, visited, k, cnt):
             
     global answer
     answer = max(answer, cnt)
-
-
+    
 # answer = -1
 
 # def solution(k, dungeons):

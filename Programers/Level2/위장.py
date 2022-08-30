@@ -9,7 +9,6 @@ def solution(clothes):
         else:
             dic[clothes[i][1]] += 1
   
-    
     for i in dic.values():
         answer *= i+1
    

@@ -48,8 +48,7 @@ def solution(gems):
                     dic[gems[endIdx]] = 1
                 else:
                     dic[gems[endIdx]] += 1
-                    
-                
+                     
             else :
                 
                 if answer[1] - answer[0] > endIdx - startIdx :
