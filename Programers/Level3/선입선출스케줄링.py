@@ -1,3 +1,4 @@
+#9/8
 def solution(n, cores) :
     
     c_len = len(cores)

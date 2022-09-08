@@ -12,7 +12,7 @@
 
 # 9시에 시작해서 간격(t)마다 n을 빼줘 그리고 시간 된 애들 보내줘
 # n == 1 일때는 내가 무조건 가야하니까 그걸 계산해줘
-
+# 9/8
 from collections import deque
 
 def solution(n, t, m, timetable):
