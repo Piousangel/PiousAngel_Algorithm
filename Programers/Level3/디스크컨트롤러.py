@@ -1,4 +1,7 @@
+# 9/26
+
 import heapq
+
 def solution(jobs):
     idx = 0
     total = 0
