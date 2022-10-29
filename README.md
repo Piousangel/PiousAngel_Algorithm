@@ -1,4 +1,4 @@
-# Practice Python 🐤
+# Practice algorithm 🐤
 
 - 알고리즘 위주 공부
 ---
