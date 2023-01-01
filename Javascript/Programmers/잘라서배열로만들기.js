@@ -11,7 +11,7 @@ function solution(my_str, n) {
         } 
     }
     if (temp !== ""){
-        answer.push(temp)
+        answer.push(temp);
     }
     
     return answer;
