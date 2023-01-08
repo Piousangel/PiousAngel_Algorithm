@@ -10,5 +10,6 @@ function solution(k, m, score) {
         const prize = m * box[0];
         total += prize;
     }
+
     return total;
 }
