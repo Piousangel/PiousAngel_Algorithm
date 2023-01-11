@@ -3,7 +3,6 @@ function solution(my_string) {
     answer = reverseString(my_string);
     return answer;
 }
-
 function reverseString(str) {
   if (str === "")
     return "";
