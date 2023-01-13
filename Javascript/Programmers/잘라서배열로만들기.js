@@ -6,7 +6,7 @@ function solution(my_str, n) {
         cnt ++;
         temp += my_str[i];
         if (cnt % n === 0) {
-            answer.push(temp)
+            answer.push(temp);
             temp = "";
         } 
     }
