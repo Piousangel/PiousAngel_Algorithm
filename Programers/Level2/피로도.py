@@ -3,8 +3,7 @@ import copy
 answer = -1
 def solution(k, dungeons):
     
-    global answer
-    visited = [-1 for _ in range(len(dungeons))]
+    let visited =  Array(dungeons.length).fill(-1)
     
     dfs(dungeons, visited, k, 0)
     return answer
