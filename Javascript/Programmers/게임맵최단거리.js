@@ -1,20 +1,20 @@
 function solution(maps) {
     let answer = 1;
     let visited = maps;
-    let queue = [];
+    let q = [];
     const dx = [-1, 1, 0, 0];
     const dy = [0, 0, -1, 1];
     const row = maps.length;
     const col = maps[0].length;
     
-    queue.push([0, 0]);
+    q.push([0, 0]);
     visited[0][0] = 0;
     
-    while(queue.length > 0) {
-        let size = queue.length;
+    while(q.length > 0) {
+        let size = q.length;
         
         for(let i = 0; i < size; i++) {
-            let [y, x] = queue.shift();
+            let [y, x] = q.shift();
             
             for(let j = 0; j < 4; j++) {
                 let nx = x + dx[j];
@@ -24,11 +24,12 @@ function solution(maps) {
                     if(nx == col - 1 && ny == row - 1) {
                         return ++answer;
                     }
-                    queue.push([ny, nx]);
+                    q.push([ny, nx]);
                     visited[ny][nx] = 0;
                 }
             }
         }
+        
         answer++;
     }
     
