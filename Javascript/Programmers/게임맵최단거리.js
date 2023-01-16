@@ -1,5 +1,6 @@
 function solution(maps) {
     let answer = 1;
+
     const dx = [1, -1, 0, 0];
     const dy = [0, 0, 1, -1];
     const row = maps.length;
@@ -34,6 +35,7 @@ function solution(maps) {
                 }
             }
         }
+        
         answer++;
     }
     return -1;

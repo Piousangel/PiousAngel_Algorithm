@@ -2,7 +2,7 @@ function solution(word) {
     var answer = 0;
     
     alpha = ['A','E','I','O','U'];
-    arr = []
+    arr = [];
     
     function dfs(st, alpha, idx) {
         
@@ -13,11 +13,11 @@ function solution(word) {
             arr.push(st);
         }
         for(let i = 0; i < alpha.length; i++){
-            dfs(st + alpha[i], alpha, idx + 1)
+            dfs(st + alpha[i], alpha, idx + 1);
         }
-        
     }
+    
     dfs('', alpha, 0);    
-    answer = arr.indexOf(word) + 1
+    answer = arr.indexOf(word) + 1;
     return answer;
 }
