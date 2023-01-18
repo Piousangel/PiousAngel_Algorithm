@@ -1,5 +1,5 @@
 function solution(word) {
-    var answer = 0;
+    let answer = 0;
     
     alpha = ['A','E','I','O','U'];
     arr = [];
