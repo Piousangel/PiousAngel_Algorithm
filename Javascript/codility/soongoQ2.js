@@ -1,4 +1,4 @@
-// you can write to stdout for debugging purposes, e.g.
+
 // Q2
 function solution(N) {
     
@@ -17,14 +17,10 @@ function solution(N) {
             
         }
     }
-
     const answer = Math.max(...tempSum);
     return answer
-
 }
 
-// you can write to stdout for debugging purposes, e.g.
-// console.log('this is a debug message');
 // Q1
 function solution(S, K) {
 
