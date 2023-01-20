@@ -3,11 +3,10 @@ function solution(a, b, n) {
     let temp = 0;
 
     while (n >= a) {
-        n = parseInt(n / a) * b;
-        temp += n % a;
-        answer += n;
+        let temp = parseInt(n / a) * b;
+        answer += temp;
+        n = temp + (n % a);
     }
-    answer += parseInt((n + temp) / a) * b;
+
     return answer;
 }
-//다시
