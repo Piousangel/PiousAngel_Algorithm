@@ -1,6 +1,5 @@
 function solution(babbling) {
     let answer = 0;
-
     const arr = ["aya", "ye", "woo", "ma"];
 
     for (let i = 0; i < babbling.length; i++) {
