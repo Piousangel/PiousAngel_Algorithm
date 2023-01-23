@@ -13,12 +13,12 @@ function solution(N) {
             let tempNum2 = tempArr.slice(i+1, Arr.length);
             let temp = [...tempNum1 , ...tempNum2];
             // console.log(temp)
-            tempSum.push(Number(temp.join('')))
+            tempSum.push(Number(temp.join('')));
             
         }
     }
     const answer = Math.max(...tempSum);
-    return answer
+    return answer;
 }
 
 // Q1
@@ -28,6 +28,6 @@ function solution(S, K) {
 
     let tempIdx = date.indexOf(S);
     tempIdx = (tempIdx + K) % 7;
-    return date[tempIdx]
+    return date[tempIdx];
     // Implement your solution here
 }
