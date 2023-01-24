@@ -1,4 +1,5 @@
 function solution(k, m, score) {
+    
     if(score.length < m){
         return 0;
     }
