@@ -1,4 +1,4 @@
-#9/8
+#9/8 이분탐색 
 def solution(n, cores) :
     
     c_len = len(cores)
@@ -11,7 +11,6 @@ def solution(n, cores) :
     right_value = cores[-1] * n
     
     while left_value <= right_value :
-        
         mid_value = (left_value + right_value) // 2
         total = c_len
         
