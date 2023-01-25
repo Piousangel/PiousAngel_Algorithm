@@ -1,4 +1,5 @@
 function solution(number) {
+    
     let result = 0;
 
     const comb = (current, start) => {
@@ -11,6 +12,7 @@ function solution(number) {
             comb([...current, number[i]], i + 1);
         }
     };
+    
     comb([], 0);
     return result;
 }
