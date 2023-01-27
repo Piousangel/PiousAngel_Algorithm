@@ -4,7 +4,6 @@ function solution(numbers) {
     for(const num of numbers){
         total += parseFloat(num);
     }
-    
     const row = 5;
     const col = 5;
     const  arr = Array.from(new Array(col), () => new Array(row).fill(0));
