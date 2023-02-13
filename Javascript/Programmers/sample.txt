@@ -1,0 +1,4 @@
+["FollowSystem", "follow", "follow", "follow" ,"follow", "unfollow",
+"isMutualFollowing"]
+[[], ["AAA1", "AAA2"], ["AAA1", "AAA2"], ["AAA2", "AAA3"], ["AAA1",
+"AAA3"], ["AAA3", "AAA1"], ["AAA2", "AAA4"]]
