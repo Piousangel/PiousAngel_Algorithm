@@ -51,3 +51,16 @@ function solution(edges) {
     answer = Math.max(...visitedCahce.flat());
     return answer;
 }
+
+// const edges = [
+//     [0, 1],
+//     [1, 0],
+// ];
+
+const edges = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [1, 0, 0],
+];
+
+console.log(solution(edges));
