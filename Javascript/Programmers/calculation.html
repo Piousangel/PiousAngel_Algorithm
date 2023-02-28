@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>데브툴즈 계산기</title>
+
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td {
+                padding: 10px 20px;
+                text-align: center;
+                background-color: gainsboro;
+            }
+            input {
+                text-align: right;
+                border: none;
+            }
+            input:focus {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td colspan="4" style="background-color: black">
+                    <input
+                        type="text"
+                        id="calBoard"
+                        style="background-color: black"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>+/-</td>
+                <td>%</td>
+                <td style="background-color: orange">/</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td style="background-color: orange">*</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td style="background-color: orange">-</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td style="background-color: orange">+</td>
+            </tr>
+            <tr>
+                <td colspan="2">0</td>
+                <td>.</td>
+                <td style="background-color: orange">=</td>
+            </tr>
+        </table>
+    </body>
+</html>
