@@ -23,3 +23,6 @@ function solution(heights) {
     answer.unshift(0);
     return answer;
 }
+
+
+// git 서버가 이상한가?
